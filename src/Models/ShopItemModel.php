@@ -1,19 +1,19 @@
 <?php
 
-namespace Amsgames\LaravelShop\Models;
+namespace BaklySystems\LaravelShop\Models;
 
 /**
  * This file is part of LaravelShop,
  * A shop solution for Laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
-use Amsgames\LaravelShop\Contracts\ShopItemInterface;
-use Amsgames\LaravelShop\Traits\ShopItemTrait;
+use BaklySystems\LaravelShop\Contracts\ShopItemInterface;
+use BaklySystems\LaravelShop\Traits\ShopItemTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 

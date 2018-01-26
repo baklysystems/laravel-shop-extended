@@ -1,29 +1,29 @@
 <?php
 
-namespace Amsgames\LaravelShop;
+namespace BaklySystems\LaravelShop;
 
 /**
  * This class is the main entry point of laravel shop. Usually this the interaction
  * with this class will be done through the LaravelShop Facade
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 use Auth;
-use Amsgames\LaravelShop\Gateways;
+use BaklySystems\LaravelShop\Gateways;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Log;
-use Amsgames\LaravelShop\Exceptions\CheckoutException;
-use Amsgames\LaravelShop\Exceptions\GatewayException;
-use Amsgames\LaravelShop\Exceptions\ShopException;
-use Amsgames\LaravelShop\Events\CartCheckout;
-use Amsgames\LaravelShop\Events\OrderCompleted;
-use Amsgames\LaravelShop\Events\OrderPlaced;
-use Amsgames\LaravelShop\Events\OrderStatusChanged;
+use BaklySystems\LaravelShop\Exceptions\CheckoutException;
+use BaklySystems\LaravelShop\Exceptions\GatewayException;
+use BaklySystems\LaravelShop\Exceptions\ShopException;
+use BaklySystems\LaravelShop\Events\CartCheckout;
+use BaklySystems\LaravelShop\Events\OrderCompleted;
+use BaklySystems\LaravelShop\Events\OrderPlaced;
+use BaklySystems\LaravelShop\Events\OrderStatusChanged;
 
 class LaravelShop
 {

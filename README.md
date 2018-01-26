@@ -85,13 +85,13 @@ On the horizon:
 With composer
 
 ```bash
-composer require amsgames/laravel-shop
+composer require baklysystems/laravel-shop
 ```
 
 Or add
 
 ```json
-"amsgames/laravel-shop": "0.2.*"
+"baklysystems/laravel-shop": "2.16"
 ```
 
 to your composer.json. Then run `composer install` or `composer update`.
@@ -99,7 +99,7 @@ to your composer.json. Then run `composer install` or `composer update`.
 Then in your `config/app.php` add 
 
 ```php
-Amsgames\LaravelShop\LaravelShopProvider::class,
+BaklySystems\LaravelShop\LaravelShopProvider::class,
 ```
     
 in the `providers` array.
@@ -107,7 +107,7 @@ in the `providers` array.
 Then add
 
 ```php
-'Shop'      => Amsgames\LaravelShop\LaravelShopFacade::class,
+'Shop'      => BaklySystems\LaravelShop\LaravelShopFacade::class,
 ```
     
 in the `aliases` array.
@@ -185,7 +185,7 @@ This will create the model file `app/Item.php`, edit it and make it look like (t
 
 namespace App;
 
-use Amsgames\LaravelShop\Models\ShopItemModel;
+use BaklySystems\LaravelShop\Models\ShopItemModel;
 
 class Item extends ShopItemModel
 {
@@ -229,7 +229,7 @@ This will create the model file `app/Cart.php`, edit it and make it look like (t
 
 namespace App;
 
-use Amsgames\LaravelShop\Models\ShopCartModel;
+use BaklySystems\LaravelShop\Models\ShopCartModel;
 
 class Cart extends ShopCartModel 
 {
@@ -267,7 +267,7 @@ This will create the model file `app/Order.php`, edit it and make it look like (
 
 namespace App;
 
-use Amsgames\LaravelShop\Models\ShopOrderModel;
+use BaklySystems\LaravelShop\Models\ShopOrderModel;
 
 class Order extends ShopOrderModel 
 {
@@ -307,7 +307,7 @@ This will create the model file `app/Transaction.php`, edit it and make it look 
 
 namespace App;
 
-use Amsgames\LaravelShop\Models\ShopTransactionModel;
+use BaklySystems\LaravelShop\Models\ShopTransactionModel;
 
 class Transaction extends ShopTransactionModel 
 {
@@ -326,12 +326,12 @@ The `Order` model has the following main attributes:
 
 #### User
 
-Use the `ShopUserTrait` trait in your existing `User` model. By adding `use Amsgames\LaravelShop\Traits\ShopUserTrait` and `use ShopUserTrait` like in the following example:
+Use the `ShopUserTrait` trait in your existing `User` model. By adding `use BaklySystems\LaravelShop\Traits\ShopUserTrait` and `use ShopUserTrait` like in the following example:
 
 ```php
 <?php
 
-use Amsgames\LaravelShop\Traits\ShopUserTrait;
+use BaklySystems\LaravelShop\Traits\ShopUserTrait;
 
 class User extends Model {
 
@@ -349,12 +349,12 @@ This will enable the relation with `Cart` and shop needed methods and attributes
 
 Laravel Shop package lets you convert any existing `Eloquent` model to a shoppable item that can be used within the shop without sacrificing any existing functionality. This feature will let the model be added to carts or orders. The will require two small steps:
 
-Use the `ShopItemTrait` in your existing model. By adding `use Amsgames\LaravelShop\Traits\ShopItemTrait` and `use ShopItemTrait` like in the following example:
+Use the `ShopItemTrait` in your existing model. By adding `use BaklySystems\LaravelShop\Traits\ShopItemTrait` and `use ShopItemTrait` like in the following example:
 
 ```php
 <?php
 
-use Amsgames\LaravelShop\Traits\ShopItemTrait;
+use BaklySystems\LaravelShop\Traits\ShopItemTrait;
 
 class MyCustomProduct extends Model {
 
@@ -414,7 +414,7 @@ By default, Laravel Shop will look for the `name` attribute to define the item's
 ```php
 <?php
 
-use Amsgames\LaravelShop\Traits\ShopItemTrait;
+use BaklySystems\LaravelShop\Traits\ShopItemTrait;
 
 class MyCustomProduct extends Model {
 
@@ -437,7 +437,7 @@ You can define the URL attribute of the item by setting `itemRouteName` and `ite
 ```php
 <?php
 
-use Amsgames\LaravelShop\Traits\ShopItemTrait;
+use BaklySystems\LaravelShop\Traits\ShopItemTrait;
 
 class MyCustomProduct extends Model {
 
@@ -475,8 +475,8 @@ Installed payment gateways can be configured and added in the `gateways` array i
 
 ```php
 'gateways' => [
-    'paypal'            =>  Amsgames\LaravelShopGatewayPaypal\GatewayPayPal::class,
-    'paypalExpress'     =>  Amsgames\LaravelShopGatewayPaypal\GatewayPayPalExpress::class,
+    'paypal'            =>  BaklySystems\LaravelShopGatewayPaypal\GatewayPayPal::class,
+    'paypalExpress'     =>  BaklySystems\LaravelShopGatewayPaypal\GatewayPayPalExpress::class,
 ],
 ```
 
@@ -946,10 +946,10 @@ Here are the events references:
 
 | Event  | Reference |
 | ------------- | ------------- |
-| Cart checkout | `Amsgames\LaravelShop\Events\CartCheckout` |
-| Order placed | `Amsgames\LaravelShop\Events\OrderPlaced` |
-| Order completed | `Amsgames\LaravelShop\Events\OrderCompleted` |
-| Order status changed | `Amsgames\LaravelShop\Events\OrderStatusChanged` |
+| Cart checkout | `BaklySystems\LaravelShop\Events\CartCheckout` |
+| Order placed | `BaklySystems\LaravelShop\Events\OrderPlaced` |
+| Order completed | `BaklySystems\LaravelShop\Events\OrderCompleted` |
+| Order status changed | `BaklySystems\LaravelShop\Events\OrderStatusChanged` |
 
 #### Event Handler Example
 
@@ -964,7 +964,7 @@ use App\Order;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-use Amsgames\LaravelShop\Events\OrderCompleted;
+use BaklySystems\LaravelShop\Events\OrderCompleted;
 
 class NotifyPurchase implements ShouldQueue
 {
@@ -992,7 +992,7 @@ class NotifyPurchase implements ShouldQueue
 Remember to register your handles and listeners at the Event Provider:
 
 ```php
-        'Amsgames\LaravelShop\Events\OrderCompleted' => [
+        'BaklySystems\LaravelShop\Events\OrderCompleted' => [
             'App\Handlers\Events\NotifyPurchase',
         ],
 ```
@@ -1009,9 +1009,9 @@ Make this proyect a required dependency of your package or laravel's setup and s
 
 namespace Vendor\Package;
 
-use Amsgames\LaravelShop\Core\PaymentGateway;
-use Amsgames\LaravelShop\Exceptions\CheckoutException;
-use Amsgames\LaravelShop\Exceptions\GatewayException;
+use BaklySystems\LaravelShop\Core\PaymentGateway;
+use BaklySystems\LaravelShop\Exceptions\CheckoutException;
+use BaklySystems\LaravelShop\Exceptions\GatewayException;
 
 class GatewayPayPal extends PaymentGateway
 {
@@ -1089,9 +1089,9 @@ Laravel Shop supports gateways that require callbacks. For this, you will need t
 
 namespace Vendor\Package;
 
-use Amsgames\LaravelShop\Core\PaymentGateway;
-use Amsgames\LaravelShop\Exceptions\CheckoutException;
-use Amsgames\LaravelShop\Exceptions\GatewayException;
+use BaklySystems\LaravelShop\Core\PaymentGateway;
+use BaklySystems\LaravelShop\Exceptions\CheckoutException;
+use BaklySystems\LaravelShop\Exceptions\GatewayException;
 
 class GatewayWithCallbacks extends PaymentGateway
 {

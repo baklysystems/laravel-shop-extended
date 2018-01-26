@@ -1,21 +1,21 @@
 <?php
 
-namespace Amsgames\LaravelShop\Gateways;
+namespace BaklySystems\LaravelShop\Gateways;
 
 /**
  * This file is part of LaravelShop,
  * A shop solution for Laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
-use Amsgames\LaravelShop\Exceptions\CheckoutException;
-use Amsgames\LaravelShop\Exceptions\GatewayException;
-use Amsgames\LaravelShop\Exceptions\ShopException;
-use Amsgames\LaravelShop\Core\PaymentGateway;
+use BaklySystems\LaravelShop\Exceptions\CheckoutException;
+use BaklySystems\LaravelShop\Exceptions\GatewayException;
+use BaklySystems\LaravelShop\Exceptions\ShopException;
+use BaklySystems\LaravelShop\Core\PaymentGateway;
 
 class GatewayFail extends PaymentGateway
 {

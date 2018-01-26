@@ -1,6 +1,6 @@
 <?php
 
-namespace Amsgames\LaravelShop\Http\Controllers;
+namespace BaklySystems\LaravelShop\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

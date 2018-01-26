@@ -1,15 +1,15 @@
 <?php
 
-namespace Amsgames\LaravelShop\Contracts;
+namespace BaklySystems\LaravelShop\Contracts;
 
 /**
  * This file is part of LaravelShop,
  * A shop solution for Laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 interface ShopTransactionInterface

@@ -1,15 +1,15 @@
 <?php
 
-namespace Amsgames\LaravelShop\Exceptions;
+namespace BaklySystems\LaravelShop\Exceptions;
 
 /**
  * This class is the main entry point of laravel shop. Usually this the interaction
  * with this class will be done through the LaravelShop Facade
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 class GatewayException extends \Exception

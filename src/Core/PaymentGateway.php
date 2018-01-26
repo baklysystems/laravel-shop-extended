@@ -1,21 +1,21 @@
 <?php
 
-namespace Amsgames\LaravelShop\Core;
+namespace BaklySystems\LaravelShop\Core;
 
 /**
  * This file is part of LaravelShop,
  * A shop solution for Laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 use JsonSerializable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
-use Amsgames\LaravelShop\Contracts\PaymentGatewayInterface;
+use BaklySystems\LaravelShop\Contracts\PaymentGatewayInterface;
 
 abstract class PaymentGateway implements PaymentGatewayInterface, Arrayable, Jsonable, JsonSerializable
 {

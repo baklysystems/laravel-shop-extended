@@ -1,6 +1,6 @@
 <?php
 
-namespace Amsgames\LaravelShop\Events;
+namespace BaklySystems\LaravelShop\Events;
 
 use Illuminate\Queue\SerializesModels;
 
@@ -8,9 +8,9 @@ use Illuminate\Queue\SerializesModels;
  * Event fired when an order has been completed.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 class OrderCompleted
 {

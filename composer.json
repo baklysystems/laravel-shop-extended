@@ -24,7 +24,7 @@
             "src/Commands"
         ],
         "psr-4": {
-            "Amsgames\\LaravelShop\\": "src"
+            "BaklySystems\\LaravelShop\\": "src"
         }
     },
     "minimum-stability": "dev"

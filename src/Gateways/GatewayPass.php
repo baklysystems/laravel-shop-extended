@@ -1,19 +1,19 @@
 <?php
 
-namespace Amsgames\LaravelShop\Gateways;
+namespace BaklySystems\LaravelShop\Gateways;
 
 /**
  * This file is part of LaravelShop,
  * A shop solution for Laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 use Log;
-use Amsgames\LaravelShop\Core\PaymentGateway;
+use BaklySystems\LaravelShop\Core\PaymentGateway;
 
 class GatewayPass extends PaymentGateway
 {
