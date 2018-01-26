@@ -3,7 +3,7 @@
 use App;
 use Log;
 use Shop;
-use Amsgames\LaravelShop;
+use BaklySystems\LaravelShop;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -24,7 +24,7 @@ class ShopTest extends TestCase
 	 */
 	public function testConstants()
 	{
-	    $this->assertTrue(Amsgames\LaravelShop\LaravelShop::QUANTITY_RESET);
+	    $this->assertTrue(BaklySystems\LaravelShop\LaravelShop::QUANTITY_RESET);
 	}
 
 }

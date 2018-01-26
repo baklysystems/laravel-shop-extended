@@ -14,11 +14,11 @@ After studio is install in composer and created as dependency of the project. La
 "autoload": {
     "classmap": [
         "database",
-        "Amsgames/laravel-shop/src/commands"
+        "BaklySystems/laravel-shop/src/commands"
     ],
     "psr-4": {
         "App\\": "app/",
-        "Amsgames\\LaravelShop\\": "Amsgames/laravel-shop/src"
+        "BaklySystems\\LaravelShop\\": "BaklySystems/laravel-shop/src"
     }
 },
 ```
@@ -28,7 +28,7 @@ The `tests` directory must be added to the project's `phpunit.xml` file:
 <testsuites>
     <testsuite name="Application Test Suite">
         <directory>./tests/</directory>
-        <directory>./amsgames/laravel-shop/tests/</directory>
+        <directory>./baklysystems/laravel-shop/tests/</directory>
     </testsuite>
 </testsuites>
 ```
@@ -41,9 +41,9 @@ Add the following test gateways the array in `shop.php` config file:
 
 ```php
 'gateways' => [
-    'testFail'          =>  Amsgames\LaravelShop\Gateways\GatewayFail::class,
-    'testPass'          =>  Amsgames\LaravelShop\Gateways\GatewayPass::class,
-    'testCallback'      =>  Amsgames\LaravelShop\Gateways\GatewayCallback::class,
+    'testFail'          =>  BaklySystems\LaravelShop\Gateways\GatewayFail::class,
+    'testPass'          =>  BaklySystems\LaravelShop\Gateways\GatewayPass::class,
+    'testCallback'      =>  BaklySystems\LaravelShop\Gateways\GatewayCallback::class,
 ],
 ```
 
@@ -104,7 +104,7 @@ And the model file to look like:
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Amsgames\LaravelShop\Traits\ShopItemTrait;
+use BaklySystems\LaravelShop\Traits\ShopItemTrait;
 
 class TestProduct extends Model
 {

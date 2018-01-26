@@ -1,14 +1,14 @@
 <?php
 
-namespace Amsgames\LaravelShop;
+namespace BaklySystems\LaravelShop;
 
 /**
  * Service provider for laravel.
  *
  * @author Alejandro Mostajo
- * @copyright Amsgames, LLC
+ * @copyright BaklySystems, LLC
  * @license MIT
- * @package Amsgames\LaravelShop
+ * @package BaklySystems\LaravelShop
  */
 
 use Illuminate\Routing\Router;
@@ -113,7 +113,7 @@ class LaravelShopProvider extends ServiceProvider
      */
     public function map(Router $router)
     {
-        $router->group(['namespace' => 'Amsgames\LaravelShop\Http\Controllers'], function($router) {
+        $router->group(['namespace' => 'BaklySystems\LaravelShop\Http\Controllers'], function($router) {
 
             $router->group(['prefix' => 'shop'], function ($router) {
 
