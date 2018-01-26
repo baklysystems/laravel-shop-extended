@@ -165,4 +165,8 @@ class MigrationCommand extends Command
 
         return false;
     }
+
+    public function handle(){
+        return $this->fire();
+    }
 }
