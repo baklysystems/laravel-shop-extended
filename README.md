@@ -85,13 +85,13 @@ On the horizon:
 With composer
 
 ```bash
-composer require baklysystems/laravel-shop
+composer require baklysystems/laravel-shop-extended
 ```
 
 Or add
 
 ```json
-"baklysystems/laravel-shop": "2.16"
+"baklysystems/laravel-shop-extended": "2.19"
 ```
 
 to your composer.json. Then run `composer install` or `composer update`.
