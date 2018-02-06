@@ -29,9 +29,9 @@ class LaravelShopProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Router $router)
+    public function boot()
     {
-        parent::boot($router);
+        parent::boot();
 
         // Publish config files
         $this->publishes([
@@ -88,7 +88,7 @@ class LaravelShopProvider extends ServiceProvider
      */
     private function registerCommands()
     {
-        $this->app->bindShared('command.laravel-shop.migration', function ($app) {
+        $this->app->singleton('command.laravel-shop.migration', function ($app) {
             return new MigrationCommand();
         });
     }
