@@ -17,7 +17,10 @@
         "php": ">=5.5.9",
         "illuminate/console": "^5.0",
         "illuminate/support": "^5.0",
-        "amsgames/laravel-shop-gateway-paypal": "1.0.*"
+        "paypal/rest-api-sdk-php": "*"
+    },
+    "require-dev": {
+        "sami/sami": "dev-master"
     },
     "autoload": {
         "classmap": [
